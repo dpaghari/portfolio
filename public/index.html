@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Daniel Pagharion San Francisco Bay Area Front End Web Developer Portfolio"/>
+    <meta name="author" content="Daniel Pagharion"/>
+    <meta name="robots" content="Index, Follow"/>
+    <title>Daniel Pagharion | Web Developer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Source+Sans+Pro">
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <nav>
+        <div id="nav-container">
+          <div class="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+      <div class="menu-container">
+        <ul class="menu">
+          <li class='active'><a href="#">Home</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Dance</a></li>
+          <li><a href="#">Photos</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <section class="hero">
+        <h1><span>daniel</span>pagharion</h1>
+        <h2>web developer</h2>
+        <h3><img src="assets/img/oakland.png" alt="Oakland Tree Logo">Oakland, CA</h3>
+        <a href="#about">
+          <img class="arrow-down" src="assets/img/arrow-down.svg" alt="">
+        </a>
+      </section>
+      <section id="about" class="about">
+        <img src="assets/img/profile.png" alt="Daniel Pagharion">
+        <p>
+          I currently work as a Front-End Web Developer in
+          <span class="bio-loc">San Francisco, CA</span>.
+          I challenge myself to write elegant code, as well as to keep up with the latest in web tooling and best practices.
+          <br>When I am not bossing pixels around, I enjoy rock climbing,
+          <a href="https://www.youtube.com/playlist?list=PLHJU8dnZzNBDyFVL2Tnqm0cxjVYpKX-KC" class="hiphop">hip-hop dancing</a>,
+          getting lost in the city, competitive gaming, finding the tastiest food, photography, listening to live music and becoming more of a morning person.
+        </p>
+      </section>
+      <section class="projects">
+        <h4>Latest Work</h4>
+        <ul class="projects-list">
+          <li class="project">
+            <div class="left">
+              <h5>Portfolio</h5>
+              <p>
+                My current portfolio website redesigned to focus on being more mobile friendly.
+                Showcases my personal projects and a few projects from my current work that I had major contributions in.
+                Also serves as my guinea pig for trying out new layouts and getting some practice with branding.
+              </p>
+            </div>
+            <img src="assets/img/screenshots/portfolio.png" alt="danielpagharion.com" class="right">
+          </li>
+          <li class="project">
+            <div class="left">
+              <h5><a href="http://homecooked-meal-planner-app.herokuapp.com" target="_blank">Homecooked</a></h5>
+              <p>
+                (WIP)
+                Simple weekly meal planning app that reads the selected recipes and generates a shopping list for the user.
+                Serving as a practice app for working with a fully Javascript based app using Express and MySQL in the back-end,
+                utilizing Jade/Pug as a templating engine, jQuery and Sass on the Front-End
+                and using Axios as the main http promise based module for RESTful API calls between the client and server.
+                Fun way to practice creating a micro-service for manipulating all the recipe data in play.
+              </p>
+            </div>
+            <img src="assets/img/screenshots/homecooked.png" alt="Homecooked" class="right">
+          </li>
+          <li class="project">
+            <div class="left">
+              <h5><a href="http://eventapp.danielpagharion.com" target="_blank">Upnext</a></h5>
+              <p>
+                (WIP)
+                Event planning app that allows you to create a visual representation of upcoming events and also serves as a discussion board for fellow attendees.
+                Served as a practice app for creating a micro-service for manipulating all event data using a PHP backend(MAMP) and using React on the Front-End along with Sass.
+              </p>
+            </div>
+            <img src="assets/img/screenshots/upnext.png" alt="Upnext" class="right">
+          </li>
+          <li class="project">
+            <div class="left">
+              <h5><a href="" target="_blank">Newtab Nuevo</a></h5>
+              <p>
+                Chrome Browser Extension that takes over the new tab page affording users access to widgets and creating better bookmarks.
+                Time spent learning Chrome's Browser Extension API and
+                trying out how to implement various User Interface Widgets and test User Experience ideas.
+              </p>
+            </div>
+            <img src="assets/img/screenshots/dashtab.png" alt="Newtab Nuevo" class="right">
+          </li>
+        </ul>
+      </section>
+      <section class="contact">
+        <h6>Let's get in touch!</h6>
+        <a href="mailto:dspagharion@gmail.com" class="emailBtn">dspagharion@gmail.com</a>
+        <ul class="socials">
+          <li>
+            <a href="https://github.com/dpaghari">
+              <img src="assets/img/socials/github.svg" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/danielpagharion">
+              <img src="assets/img/socials/linkedin.svg" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/dannypaguiao">
+              <img src="assets/img/socials/twitter.svg" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/dannypaguiao/">
+              <img src="assets/img/socials/instagram.svg" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/channel/UCTtlJcUAR8MydHoJOJa7OCg">
+              <img src="assets/img/socials/youtube.svg" alt="">
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script src="lib/noframework.waypoints.min.js" charset="utf-8"></script>
+  <script src="client.min.js" charset="utf-8"></script>
+  <!-- Google Tag Manager -->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-N3PR77"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N3PR77');</script>
+  <!-- End Google Tag Manager -->
+  </body>
+</html>

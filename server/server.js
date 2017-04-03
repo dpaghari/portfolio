@@ -3,13 +3,13 @@ const app = express();
 
 // App Settings
 app.use(express.static('public'));
-app.set('view engine', 'pug');
+// app.set('view engine', 'pug');
 
 //############
 // ROUTING
 //############
 app.get('/', function(req, res) {
-  res.render('index');
+  res.sendFile('index.html');
 });
 
 

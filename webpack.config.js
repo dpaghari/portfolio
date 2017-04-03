@@ -15,6 +15,9 @@ module.exports = {
     filename: 'client.min.js'
   },
   resolve: {
+    alias: {
+      'waypoints': 'waypoints/lib/jquery.waypoints.js'
+    },
     modulesDirectories: ['node_modules', 'client', 'stylesheets'],
     extensions: ['', '.js', '.scss']
   },
