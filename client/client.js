@@ -27,6 +27,15 @@ $(document).ready(function (){
   	        'scrollTop': $target.offset().top - 85
   	    }, 900, 'swing');
   	});
+    // function triggered on window scroll
+  // $(window).on('scroll', function() {
+  //
+  //     // store the current vertical position of the scroll bar
+  //     var scroll_top = $(window).scrollTop();
+  //
+  //     // change inline css rule, based on factor of scroll_top
+  //     $('h1.headline').css('background-position-y', scroll_top * -1.0);
+  // });
 });
 
 
