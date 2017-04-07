@@ -1,3 +1,5 @@
+@import 'home-mobile';
+
 section.hero {
   display: flex;
   flex-direction: column;
@@ -6,14 +8,14 @@ section.hero {
   padding: $space/4;
   position: relative;
   background-attachment: fixed;
-  background: linear-gradient(to bottom, $matBlueGray, $darkestestMatBlueGray);
+  background: linear-gradient(to bottom, $matBlueGray, $darkestMatBlueGray);
   // background: url('/assets/img/bay.jpg');
   text-align: center;
   color: $darkestMatBlueGray;
   height: 110vh;
   h1 {
     margin-top: 80px;
-    font-size: 7em;
+    font-size: 9vw;
     text-transform: uppercase;
     text-shadow: 0px 3px $darkestestMatBlueGray;
     span {
@@ -21,8 +23,12 @@ section.hero {
     }
   }
   h2 {
-    font-size: 4em;
+    font-size: 7vw;
     text-shadow: 0px 2px $darkestestMatBlueGray;
+  }
+  img {
+    margin: 10px auto;
+    width: 120px;
   }
   h3 {
     display: flex;
@@ -33,10 +39,7 @@ section.hero {
     padding: 10px 20px 100px;
     color: $darkestestMatBlueGray;
     // text-shadow: 0px 1px $darkestestMatBlueGray;
-    img {
-      margin: 10px auto;
-      width: 120px;
-    }
+
   }
   img.arrow-down {
     width: 50px;
@@ -54,7 +57,7 @@ section.about {
     flex-direction: column;
     text-align: center;
     width: 100%;
-    justify-content: center;
+    // justify-content: center;
     padding-bottom: 100px;
     position: relative;
     z-index: 1;
@@ -62,16 +65,21 @@ section.about {
       width: 160px;
       height: 160px;
       border-radius: 50%;
-      margin: -40px auto 85px;
+      margin: 0 auto;
+      position: relative;
+      top: -65px;
       box-shadow: 0px 2px 4px #B0BEC5;
     }
     p {
-      font-size: 2.1em;
-      line-height: 2.2em;
-      width: 60%;
+      font-size: 4.8vh;
+      line-height: 5.5vh;
+      width: 80%;
+      height: 100%;
       margin: 0 auto;
-      span.bio-loc {
-        color: #a30404;
+
+      span:not(.bio-loc) {
+        margin: 24px auto;
+        display: block;
       }
       a.hiphop {
         text-decoration: none;
@@ -105,7 +113,7 @@ section.projects {
   h4 {
     margin-top: 60px;
     margin-left: 48px;
-    font-size: 6em;
+    font-size: 8vw;
     text-transform: uppercase;
     font-weight: bold;
     color: $darkestMatBlueGray;
@@ -121,11 +129,11 @@ section.projects {
         width: 40%;
         position: relative;
         left: -10%;
-        transition: 1.3s all;
+        transition: 1.3s left, 1.3s opacity;
         opacity: 0;
         h5 {
           margin-left: 48px;
-          font-size: 3em;
+          font-size: 4vw;
           color: $matBlueGray;
           border-bottom: 1px solid $whiterMatBlueGray;
           padding-bottom: 5px;
@@ -139,7 +147,7 @@ section.projects {
         p {
           margin: 24px auto;
           width: 80%;
-          font-size: 1.5em;
+          font-size: 1.8vw;
           line-height: 1.7em;
           color: $lightMatBlueGray;
         }
@@ -151,7 +159,7 @@ section.projects {
         position: relative;
         right: -10%;
         opacity: 0;
-        transition: 1.3s all;
+        transition: 1.3s opacity, 1.3s right;
         height: 100%;
         max-height: 640px;
         // img {
@@ -170,29 +178,32 @@ section.contact {
   height: 100%;
   padding: 40px 0;
   h6 {
-    margin-top: 24px;
+    margin: 24px auto;
     color: $darkestestMatBlueGray;
     text-align: center;
-    font-size: 5em;
+    font-size: 8vw;
   }
   a {
     display: block;
     text-align: center;
     text-decoration: none;
-    font-size: 5em;
-    margin: 48px auto;
+    font-size: 7vw;
+    margin: 48px auto 24px;
     color: $whiteMatBlueGray;
   }
 
   ul.socials {
-    // margin-top: 50px;
+
     width: 100%;
     display: flex;
     justify-content: center;
     list-style-type: none;
     li {
       margin: 0px 48px;
-      // height: 80px;
+      &.mail-alt {
+        display: none;
+      }
+
       img {
         width: 36px;
         transition: 0.2s all;
@@ -206,4 +217,5 @@ section.contact {
 
 section {
   height: 100vh;
+  width: 100%;
 }
