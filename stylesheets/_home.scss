@@ -12,23 +12,45 @@ section.hero {
   // background: url('/assets/img/bay.jpg');
   text-align: center;
   color: $darkestMatBlueGray;
-  height: 110vh;
+  height: 100vh;
+  &.wp-fadeup {
+    h1, h2 {
+      opacity: 1;
+      bottom: 0;
+    }
+    img, h3 {
+      opacity: 1;
+    }
+  }
+
+
   h1 {
+    opacity: 0;
+    position: relative;
     margin-top: 80px;
-    font-size: 9vw;
+    bottom: -100px;
+    font-size: 7vw;
     text-transform: uppercase;
     text-shadow: 0px 3px $darkestestMatBlueGray;
+    transition: 1s all;
     span {
       color: #ECEFF1;
     }
   }
   h2 {
-    font-size: 7vw;
+    opacity: 0;
+    position: relative;
+    bottom: -100px;
+    font-size: 5vw;
     text-shadow: 0px 2px $darkestestMatBlueGray;
+    transition: 1s all;
   }
   img {
     margin: 10px auto;
-    width: 120px;
+    width: 128px;
+    opacity: 0;
+    height: 128px;
+    transition: 1.5s all 1s;
   }
   h3 {
     display: flex;
@@ -38,6 +60,9 @@ section.hero {
     font-size: 2em;
     padding: 10px 20px 100px;
     color: $darkestestMatBlueGray;
+    opacity: 0;
+    transition: 1.5s all 1s;
+    // animation-delay: 1s;
     // text-shadow: 0px 1px $darkestestMatBlueGray;
 
   }
@@ -65,15 +90,15 @@ section.about {
       width: 160px;
       height: 160px;
       border-radius: 50%;
-      margin: 0 auto;
-      position: relative;
-      top: -65px;
+      margin: 48px auto;
+      // position: relative;
+      // top: -65px;
       box-shadow: 0px 2px 4px #B0BEC5;
     }
     p {
-      font-size: 4.8vh;
-      line-height: 5.5vh;
-      width: 80%;
+      font-size: 2vw;
+      line-height: 4vw;
+      width: 70%;
       height: 100%;
       margin: 0 auto;
 
@@ -126,13 +151,15 @@ section.projects {
       width: 100%;
 
       .left {
+        display: block;
         width: 40%;
         position: relative;
         left: -10%;
         transition: 1.3s left, 1.3s opacity;
         opacity: 0;
+        text-align: center;
         h5 {
-          margin-left: 48px;
+          // margin-left: 48px;
           font-size: 4vw;
           color: $matBlueGray;
           border-bottom: 1px solid $whiterMatBlueGray;
@@ -144,15 +171,66 @@ section.projects {
           }
         }
 
-        p {
+        a:visited {
+          color: $matBlueGray;
+          background: none;
+        }
+
+        a.nerd-note-btn {
+          display: block;
+          margin: 48px auto;
+          text-align: center;
+          padding: 12px 24px;
+          color: $matBlueGray;
+          text-transform: uppercase;
+          border: 1px solid $darkerMatBlueGray;
+          width: 200px;
+          font-size: 1vw;
+          text-decoration: none;
+          box-shadow: 0px 1px 1px $whiterMatBlueGray;
+          transition: 0.4s all;
+          &:hover {
+            background: $whiterMatBlueGray;
+            // color: white;
+          }
+        }
+
+        a.site-link {
+          display: block;
+          margin: 48px auto;
+          text-align: center;
+          padding: 12px 24px;
+          color: $matBlueGray;
+          text-transform: uppercase;
+          border: 1px solid $darkerMatBlueGray;
+          width: 200px;
+          font-size: 1vw;
+          text-decoration: none;
+          box-shadow: 0px 1px 1px $whiterMatBlueGray;
+          transition: 0.4s all;
+          &:hover {
+            background: $whiterMatBlueGray;
+            // color: white;
+          }
+        }
+
+        p.nerd-notes {
+          display: none;
           margin: 24px auto;
           width: 80%;
           font-size: 1.8vw;
           line-height: 1.7em;
           color: $lightMatBlueGray;
+          background: $whiteMatBlueGray;
+          padding: 24px;
+          border-radius: 10px;
+          &.active {
+            display: block;
+          }
         }
       }
       .right {
+        display: block;
         width: 60%;
         border: 1px solid $whiterMatBlueGray;
         box-shadow: 0px 5px 10px $shadows;
@@ -161,10 +239,13 @@ section.projects {
         opacity: 0;
         transition: 1.3s opacity, 1.3s right;
         height: 100%;
-        max-height: 640px;
-        // img {
-        //   width: 100%;
-        // }
+        // max-height: 640px;
+
+        img {
+          display: block;
+          height: 100%;
+          width: 100%;
+        }
       }
     }
   }
@@ -181,13 +262,13 @@ section.contact {
     margin: 24px auto;
     color: $darkestestMatBlueGray;
     text-align: center;
-    font-size: 8vw;
+    font-size: 7vw;
   }
   a {
     display: block;
     text-align: center;
     text-decoration: none;
-    font-size: 7vw;
+    font-size: 6vw;
     margin: 48px auto 24px;
     color: $whiteMatBlueGray;
   }
