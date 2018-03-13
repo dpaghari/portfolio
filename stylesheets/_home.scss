@@ -7,6 +7,7 @@
   width: 100%;
   justify-content: space-around;
   color: $blueGray;
+  // background: linear-gradient(to bottom, white 20%, lighten($winterWhite, 5%) 40%, $winterWhite 50%);
 
   &__lockup {
     display: flex;
@@ -17,9 +18,9 @@
   &__deets {
     display: flex;
     justify-content: center;
-    align-items: center;
+    text-align: left;
     flex-direction: column;
-    margin-right: 24px;
+    margin-right: 36px;
   }
 
   &__img {
@@ -32,7 +33,7 @@
   }
 
   h1 {
-    font-size: 5em;
+    font-size: 6em;
     text-transform: uppercase;
     transition: 1s all;
   }
@@ -54,20 +55,20 @@
     background: $winterWhite;
     color: $blueGray;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     width: 100%;
-    padding-bottom: 100px;
     position: relative;
     z-index: 1;
-
+    img {
+      width: 50%;
+    }
     &__bio {
-      font-size: 1.2em;
-      line-height: 1.4em;
-      width: 70%;
-      height: 100%;
+      width: 80%;
+      font-size: 1.4em;
+      line-height: 1.6em;
       margin: 0 auto;
-
       span:not(.c-about__bio-loc) {
         margin: 24px auto;
         display: block;
@@ -90,12 +91,17 @@
   &.wp-fadein {
     .c-projects__project {
       .left {
+        display: block;
         opacity: 1;
-        left: 0;
+        transform: translateX(0%);
+
       }
       .right {
+        display: block;
         opacity: 1;
-        right: 0;
+        transform: translateX(0%);
+        float: none;
+
       }
     }
   }
@@ -114,15 +120,16 @@
     margin: 96px auto;
     display: flex;
     width: 100%;
+    position: relative;
 
     .left {
       display: block;
       width: 40%;
-      position: relative;
-      left: -10%;
-      transition: 1.3s left, 1.3s opacity;
+      transform: translateX(-10%);
+      transition: 1.3s transform, 1.3s opacity;
       opacity: 0;
       text-align: center;
+
       h5 {
         font-size: 2em;
         color: $blueGray;
@@ -147,15 +154,14 @@
       width: 60%;
       border: 1px solid $winterWhite;
       box-shadow: 0px 5px 10px $shadows;
-      position: relative;
-      right: -10%;
+      float: right;
       opacity: 0;
-      transition: 1.3s opacity, 1.3s right;
       height: 100%;
-      // max-height: 640px;
+      transform: translateX(10%);
+      transition: 1.3s opacity, 1.3s transform;
 
       img {
-        display: block;
+        display: inline;
         height: 100%;
         width: 100%;
       }
@@ -238,7 +244,6 @@
 }
 
 section {
-  padding: 48px 0;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 }
