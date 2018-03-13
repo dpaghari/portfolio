@@ -1,3 +1,4 @@
+@import "typography";
 @import "vars";
 @import "colors";
 @import "animations";
@@ -90,7 +91,7 @@ body {
         position: absolute;
         height: 9px;
         width: 100%;
-        background: $darkestestMatBlueGray;
+        background: $blueGray;
         border-radius: 9px;
         opacity: 1;
         left: 0;
@@ -126,7 +127,7 @@ body {
       ul.menu {
         display: block;
       }
-      background-color: $darkestMatBlueGray;
+      background-color: $blueGray;
       opacity: 1;
     }
     display: none;
@@ -153,7 +154,7 @@ body {
           }
         }
         a {
-          color: $darkestestMatBlueGray;
+          color: $blueGray;
           text-decoration: none;
           transition: 0.2s all;
           &:hover {

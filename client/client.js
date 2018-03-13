@@ -5,7 +5,7 @@ $(document).ready(function (){
     $('.menu-container').toggleClass('active');
   });
 
-  let $splash = document.querySelector('section.hero');
+  let $splash = document.querySelector('.c-hero');
   let heroWaypoint = new Waypoint({
     element: $splash,
     handler: function(direction) {
@@ -15,7 +15,7 @@ $(document).ready(function (){
   });
 
 
-  let $project = document.querySelector('section.projects');
+  let $project = document.querySelector('.c-projects');
   let projectWaypoint = new Waypoint({
     element: $project,
     handler: function(direction) {
@@ -33,12 +33,12 @@ $(document).ready(function (){
 	    }, 900, 'swing');
   });
 
-  $(document).on('click', '.nerd-note-btn', function(e) {
-    e.preventDefault();
-    let $nerdNote = $(this).siblings('.nerd-notes')[0];
-    console.log($nerdNote);
-    // $($nerdNote).toggleClass('active');
-    $($nerdNote).slideToggle('fast');
-
-  });
+  // $(document).on('click', '.nerd-note-btn', function(e) {
+  //   e.preventDefault();
+  //   let $nerdNote = $(this).siblings('.nerd-notes')[0];
+  //   console.log($nerdNote);
+  //   // $($nerdNote).toggleClass('active');
+  //   $($nerdNote).slideToggle('fast');
+  //
+  // });
 });
