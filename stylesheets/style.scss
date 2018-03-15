@@ -142,11 +142,13 @@ body {
           }
         }
         a {
-          color: $blueGray;
+          color: $winterWhite;
           text-decoration: none;
           transition: 0.2s all;
           &:hover {
-            color: white;
+            color: darken($winterWhite, 5%);
+            padding-bottom: 12px;
+            border-bottom: 1px solid $winterWhite;
           }
         }
       }
