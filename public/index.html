@@ -10,35 +10,25 @@
     <title>Dan Pagharion | Web Developer</title>
   </head>
   <body>
-    <div class="site-wrapper">
-
-      <!-- Hamburger icon  -->
-      <!-- <nav>
-        <div id="nav-container">
-          <div class="nav-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
+    <main class="site-wrapper">
+      <nav class="c-nav">
+        <a class="c-nav__item" href="#about">About</a>
+        <a class="c-nav__item" href="#projects">Work</a>
+        <a class="c-nav__item" href="#contact">Let's Talk</a>
+        <a class="c-nav__item" href="/assets/daniel-pagharion-resume.pdf">Resume</a>
       </nav>
-      <div class="menu-container">
-        <ul class="menu">
-          <li class='active'><a href="#">Home</a></li>
-          <li><a href="https://www.youtube.com/playlist?list=PLHJU8dnZzNBDyFVL2Tnqm0cxjVYpKX-KC">Dance</a></li>
-          <li><a href="https://goo.gl/photos/aJh8oxRfaoUnCHWb9">Photos</a></li>
-          <li><a href="assets/daniel-pagharion-resume.pdf">Résume</a></li>
-          <li><a href="mailto:dspagharion@gmail.com">Contact</a></li>
-        </ul>
-      </div> -->
       <section class="c-hero">
         <div class="c-hero__lockup">
           <div class="c-hero__deets">
-            <h1> Hi! I'm Dan.</h1>
+            <h1>Hi! I'm Dan.</h1>
             <h2>Web Developer</h2>
             <h3>SF Bay Area, CA</h3>
             <ul class="c-hero__socials">
+              <li>
+                <a href="mailto@danielpagharion.com">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+                </a>
+              </li>
               <li>
                 <a href="https://www.linkedin.com/in/danielpagharion">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -116,13 +106,13 @@
           I'm currently working as a Front-End Web Developer in
           <span class="c-about__bio-loc">San Francisco, CA</span>.<br/>
           I challenge myself to write elegant code, as well as to keep up with the latest in web tooling and best practices.
-          <br><span></span>When I'm not moving pixels around for a living, you can find me either rock climbing,
+          <br><span></span>When I'm not bossing pixels around, you can find me either rock climbing,
           <a href="https://www.youtube.com/playlist?list=PLHJU8dnZzNBDyFVL2Tnqm0cxjVYpKX-KC" class="hiphop">dancing to hiphop</a>,
-          getting lost in the city, crushing nerd dreams in online games, finding the tastiest food, photography, going to concerts and becoming more of a morning person.
+          getting lost in the city, crushing nerd dreams in online games, finding the tastiest food, photography, going to concerts or trying to be more of a morning person.
         </p>
         </div>
       </section>
-      <section class="c-projects">
+      <section id="projects" class="c-projects">
         <h4>Projects</h4>
         <ul class="c-projects__projects-list">
           <li class="c-projects__project">
@@ -171,7 +161,7 @@
           </li>
         </ul>
       </section>
-      <section class="c-contact">
+      <section id="contact" class="c-contact">
         <h6>Let's get in touch!</h6>
         <a href="mailto:dspagharion@gmail.com" class="c-contact__emailBtn">dspagharion@gmail.com</a>
         <ul class="c-contact__socials">
@@ -241,7 +231,7 @@
         </ul>
 
       </section>
-    </div>
+    </main>
   <script src="lib/jquery-3.2.1.min.js"></script>
   <script src="lib/noframework.waypoints.min.js" charset="utf-8"></script>
   <script src="client.min.js" charset="utf-8"></script>

@@ -1,5 +1,36 @@
 // @import 'home-mobile';
+.c-nav {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding: 12px 48px;
+  &__item {
+    text-decoration: none;
+    padding: 12px 6px;
+    margin: 0 24px;
+    color: $blueGray;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 12px;
+  }
 
+
+  &__item:before {
+    display: block;
+    content: "";
+    border-bottom: 1px solid $blueGray;
+    width: 100%;
+    transition: 0.4s all;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: -100%;
+  }
+  &__item:hover:before {
+    left: 0
+  }
+}
 .c-hero {
   display: flex;
   flex-direction: column;
@@ -7,7 +38,7 @@
   width: 100%;
   justify-content: space-around;
   color: $blueGray;
-  background: linear-gradient(to bottom, white 20%, lighten($winterWhite, 5%) 40%, $winterWhite 50%);
+  position: relative;
   &__socials {
     width: 100%;
     display: flex;
@@ -20,18 +51,21 @@
         path {
           fill: $blueGray;
         }
-        width: 36px;
+        width: 24px;
+        height: 24px;
         transition: 0.2s all;
         &:hover {
           path {
             fill: darken($blueGray, 5%);
           }
-          // transform: scale(1.2);
         }
       }
     }
   }
   &__lockup {
+    padding: 24px 32px;
+    border-top: 12px solid $blueGray;
+    border-bottom: 12px solid $blueGray;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -252,9 +286,26 @@
     padding-bottom: 0;
     transition: 0.2s padding-bottom;
     width: auto;
-    &.c-contact__emailBtn:hover {
+    &.c-contact__emailBtn {
+      position: relative;
+      overflow: hidden;
       padding-bottom: 12px;
-      border-bottom: 1px solid $winterWhite
+    }
+
+    &.c-contact__emailBtn:before {
+      display: block;
+      content: "";
+      border-bottom: 1px solid $winterWhite;
+      width: 100%;
+      transition: 0.4s all;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: -100%;
+    }
+    &.c-contact__emailBtn:hover:before {
+      left: 0
     }
   }
   &__mail-alt {
@@ -266,12 +317,13 @@
     justify-content: center;
     list-style-type: none;
     li {
-      margin: 0px 48px;
+      margin: 0px 36px;
       svg {
         path {
           fill: $winterWhite;
         }
-        width: 36px;
+        width: 24px;
+        height: 24px;
         transition: 0.2s all;
         &:hover {
           path {
