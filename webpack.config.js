@@ -3,6 +3,7 @@ var path = require('path');
 
 const Autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 const mode = "development";
 // const mode = "production";
@@ -90,6 +91,13 @@ module.exports = {
       // both options are optional
       filename: "[name].css",
       chunkFilename: "[id].css"
+    }),
+    new BrowserSyncPlugin({
+     // browse to http://localhost:3000/ during development,
+     // ./public directory is being served
+     host: 'localhost',
+     port: 3000,
+     server: { baseDir: ['public'] }
     })
   ]
 };
