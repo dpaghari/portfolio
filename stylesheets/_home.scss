@@ -7,9 +7,8 @@
   width: 100%;
   justify-content: space-around;
   color: $blueGray;
-  // background: linear-gradient(to bottom, white 20%, lighten($winterWhite, 5%) 40%, $winterWhite 50%);
+  background: linear-gradient(to bottom, white 20%, lighten($winterWhite, 5%) 40%, $winterWhite 50%);
   &__socials {
-    // @extend .c-contact__socials;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -58,11 +57,11 @@
   h1 {
     font-size: 6em;
     text-transform: uppercase;
-    transition: 1s all;
+    // transition: 1s all;
   }
   h2 {
     font-size: 3em;
-    transition: 1s all;
+    // transition: 1s all;
   }
 
   h3 {
