@@ -20,7 +20,7 @@
     content: "";
     border-bottom: 1px solid $blueGray;
     width: 100%;
-    transition: 0.4s all;
+    transition: 0.2s all;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -187,6 +187,13 @@
       transition: 1.3s transform, 1.3s opacity;
       opacity: 0;
       text-align: center;
+      .c-projects__project-detail {
+        width: 80%;
+        border-top: 6px solid $blueGray;
+        border-bottom: 6px solid $blueGray;
+        margin: 0 auto;
+        padding: 12px 16px;
+      }
 
       h5 {
         font-size: 2em;
@@ -248,9 +255,11 @@
   &__nerd-notes {
     display: block;
     margin: 24px auto;
-    width: 80%;
-    font-size: 1.2em;
-    line-height: 1.7em;
+    width: 100%;
+    // font-size: 1.2em;
+    // line-height: 1.7em;
+    font-size: 1em;
+    line-height: 1.4em;
     color: $blueGray;
     background: $winterWhite;
     padding: 24px;
@@ -297,7 +306,7 @@
       content: "";
       border-bottom: 1px solid $winterWhite;
       width: 100%;
-      transition: 0.4s all;
+      transition: 0.2s all;
       position: absolute;
       top: 0;
       bottom: 0;
