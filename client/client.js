@@ -15,15 +15,19 @@ $(document).ready(function (){
   });
 
 
-  let $project = document.querySelector('.c-projects');
-  let projectWaypoint = new Waypoint({
-    element: $project,
-    handler: function(direction) {
-      if(direction === 'down')
-      $project.classList.add('wp-fadein');
-    },
-    offset: '35%'
+  let $projects = Array.from(document.querySelectorAll('.c-projects__project'));
+
+  $projects.map(($el) => {
+    let projectWaypoint = new Waypoint({
+      element: $el,
+      handler: function(direction) {
+        if(direction === 'down')
+        $el.classList.add('wp-fadein');
+      },
+      offset: '35%'
+    });
   });
+
   $('a[href^="#"]').on('click',function (e) {
 	    e.preventDefault();
 	    var target = this.hash;

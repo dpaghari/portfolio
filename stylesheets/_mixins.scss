@@ -22,3 +22,10 @@
     box-shadow: none;
   }
 }
+
+
+@mixin media($breakpoint) {
+  @media screen and (min-width: #{$breakpoint}) {
+    @content;
+  }
+}

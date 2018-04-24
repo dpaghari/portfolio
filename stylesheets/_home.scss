@@ -1,22 +1,28 @@
-// @import 'home-mobile';
 .c-nav {
   display: flex;
   width: 100%;
-  justify-content: flex-end;
-  padding: 12px 48px;
+  padding: 6px 48px;
+  justify-content: center;
+  @include media($tablet) {
+    justify-content: flex-end;
+    padding: 12px 48px;
+  }
   &__item {
     text-decoration: none;
     padding: 12px 6px;
-    margin: 0 24px;
+    margin: 0 12px;
     color: $blueGray;
     position: relative;
-    overflow: hidden;
     padding-bottom: 12px;
+    @include media($tablet) {
+      overflow: hidden;
+      margin: 0 24px;
+    }
   }
 
 
   &__item:before {
-    display: block;
+    display: none;
     content: "";
     border-bottom: 1px solid $blueGray;
     width: 100%;
@@ -26,6 +32,9 @@
     bottom: 0;
     right: 0;
     left: -100%;
+    @include media($tablet) {
+      display: block;
+    }
   }
   &__item:hover:before {
     left: 0
@@ -42,9 +51,14 @@
   &__socials {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     list-style-type: none;
     margin: 24px auto;
+    @include media($tablet) {
+      justify-content: flex-start;
+    }
+
+
     li {
       margin-right: 24px;
       svg {
@@ -67,34 +81,51 @@
     border-top: 12px solid $blueGray;
     border-bottom: 12px solid $blueGray;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+    @include media($tablet) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
   }
 
   &__deets {
     display: flex;
     justify-content: center;
-    text-align: left;
+    align-items: center;
     flex-direction: column;
-    margin-right: 36px;
+    @include media($tablet) {
+      margin-right: 36px;
+      text-align: left;
+      align-items: flex-start;
+    }
   }
 
   &__img {
-    width: 240px;
-    height: 240px;
+    width: 180px;
+    height: 180px;
     box-shadow: 0px 2px 4px #B0BEC5;
     border-radius: 50%;
     opacity: 1;
+    margin: 12px auto;
+    @include media($tablet) {
+      width: 240px;
+      height: 240px;
+    }
   }
 
   h1 {
-    font-size: 6em;
+    font-size: 4em;
     text-transform: uppercase;
-    // transition: 1s all;
+    text-align: center;
+    @include media($tablet) {
+      font-size: 6em;
+      text-align: left;
+    }
   }
   h2 {
     font-size: 3em;
-    // transition: 1s all;
   }
 
   h3 {
@@ -107,35 +138,42 @@
   }
 }
 .c-about {
-    background: $winterWhite;
-    color: $blueGray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    position: relative;
-    z-index: 1;
-    img {
+  background: $winterWhite;
+  color: $blueGray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  flex-direction: column;
+  @include media($tablet) {
+    flex-direction: row;
+  }
+
+  img {
+    display: none;
+    width: 50%;
+    @include media($tablet) {
       display: block;
       height: 100%;
-      width: 50%;
-
     }
-    &__bio {
-      width: 80%;
-      font-size: 1.4em;
-      line-height: 1.6em;
-      margin: 0 auto;
-      span:not(.c-about__bio-loc) {
-        margin: 24px auto;
-        display: block;
-      }
-      a.hiphop {
-        text-decoration: none;
-        color: $blueGray;
-      }
+  }
+  &__bio {
+    width: 80%;
+    font-size: 1.4em;
+    line-height: 1.6em;
+    margin: 0 auto;
+    span:not(.c-about__bio-loc) {
+      margin: 24px auto;
+      display: block;
     }
+    a.hiphop {
+      text-decoration: none;
+      color: $blueGray;
+    }
+  }
 
 }
 
@@ -146,20 +184,16 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
-  &.wp-fadein {
-    .c-projects__project {
-      .left {
+
+  .c-projects__project {
+    &.wp-fadein {
+      .left, .right {
         display: block;
         opacity: 1;
-        transform: translateX(0%);
-
+        transform: translateY(0%);
       }
       .right {
-        display: block;
-        opacity: 1;
-        transform: translateX(0%);
         float: none;
-
       }
     }
   }
@@ -179,14 +213,22 @@
     display: flex;
     width: 100%;
     position: relative;
+    flex-direction: column;
+    justify-content: center;
+    @include media($tablet) {
+      flex-direction: row;
+    }
 
     .left {
       display: block;
-      width: 40%;
-      transform: translateX(-10%);
-      transition: 1.3s transform, 1.3s opacity;
+      width: 100%;
+      transform: translateY(10%);
+      transition: 0.4s transform, 0.4s opacity;
       opacity: 0;
       text-align: center;
+      @include media($tablet) {
+        width: 40%;
+      }
       .c-projects__project-detail {
         width: 80%;
         border-top: 6px solid $blueGray;
@@ -216,14 +258,20 @@
     }
     .right {
       display: block;
-      width: 60%;
+      width: 80%;
       border: 1px solid $winterWhite;
       box-shadow: 0px 5px 10px $shadows;
       float: right;
       opacity: 0;
       height: 100%;
-      // transform: translateX(10%);
-      transition: 1.3s opacity, 1.3s transform;
+      margin: 12px auto;
+      transform: translateY(10%);
+      transition: 0.4s opacity, 0.4s transform;
+      transition-delay: 0.4s;
+      @include media($tablet) {
+        width: 60%;
+        margin: 0 auto;
+      }
 
       img {
         display: inline;
@@ -282,7 +330,10 @@
     margin: 24px auto;
     color: $winterWhite;
     text-align: center;
-    font-size: 4em;
+    font-size: 3em;
+    @include media($tablet) {
+      font-size: 4em;
+    }
   }
   a {
     font-family: 'Montserrat', sans-serif;
@@ -295,10 +346,15 @@
     padding-bottom: 0;
     transition: 0.2s padding-bottom;
     width: auto;
+
     &.c-contact__emailBtn {
       position: relative;
       overflow: hidden;
       padding-bottom: 12px;
+      font-size: 2em;
+      @include media($tablet) {
+        font-size: 3em;
+      }
     }
 
     &.c-contact__emailBtn:before {

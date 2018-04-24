@@ -14,7 +14,6 @@ module.exports = {
     './stylesheets/style.scss',
     './client/client.js'
   ],
-  watch: true,
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'client.min.js'
