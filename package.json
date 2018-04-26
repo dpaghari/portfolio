@@ -5,6 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "start": "webpack --watch --progress",
+    "pack:dev": "webpack -d --progress",
     "pack:prod": "webpack -p --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
