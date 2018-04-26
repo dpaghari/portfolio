@@ -1,3 +1,4 @@
+@import "normalize";
 @import "typography";
 @import "vars";
 @import "colors";
@@ -20,69 +21,14 @@ a {
   }
 }
 
+.container {
+  max-width: 1448px;
+  margin: 0 auto;
+}
+
+
 .site-wrapper {
   width: 100%;
   font-family: $font-stack;
-  .menu-container {
-    &.active {
-      display: flex;
-      ul.menu {
-        display: block;
-      }
-      background-color: $blueGray;
-      opacity: 1;
-    }
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    color: white;
-    font-size: 3em;
-    background: none;
-    transition: 0.3s all;
-    ul.menu {
-      display: none;
-      list-style-type: none;
-      li {
-        margin: 100px auto;
-        &.active {
-          a {
-            color: white;
-          }
-        }
-        a {
-          color: $winterWhite;
-          text-decoration: none;
-          transition: 0.2s all;
-          z-index: 1;
-          display: block;
-          &:before {
-            display: block;
-            position: absolute;
-            content: "";
-            width: 100%;
-            height: 100%;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: -100%;
-            transition: 0.2s all;
-            padding-bottom: 12px;
-            border-bottom: 1px solid $winterWhite;
-            z-index: -1;
-          }
-          &:hover:before {
-            color: darken($winterWhite, 5%);
-            left: 0;
-          }
-        }
-      }
-    }
-
-  } // end of menu-container
+  overflow: hidden;
 }

@@ -1,0 +1,39 @@
+.c-about {
+  background: $winterWhite;
+  color: $blueGray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  flex-direction: column;
+  @include media($tablet) {
+    flex-direction: row;
+  }
+
+  img {
+    display: none;
+    width: 50%;
+    @include media($tablet) {
+      display: block;
+      height: 100%;
+    }
+  }
+  &__bio {
+    width: 70%;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin: 0 auto;
+    span:not(.c-about__bio-loc) {
+      margin: 24px auto;
+      display: block;
+    }
+    a.hiphop {
+      text-decoration: none;
+      color: $blueGray;
+    }
+  }
+
+}

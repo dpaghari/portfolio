@@ -1,0 +1,104 @@
+.c-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  color: $blueGray;
+  position: relative;
+  &__socials {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 24px auto;
+    @include media($tablet) {
+      justify-content: flex-start;
+    }
+    li {
+      margin-right: 24px;
+      svg {
+        path {
+          fill: $blueGray;
+        }
+        width: 24px;
+        height: 24px;
+        transition: 0.2s all;
+        &:hover {
+          path {
+            fill: darken($blueGray, 5%);
+          }
+        }
+      }
+    }
+  }
+  &__lockup {
+    padding: 24px 32px;
+    border-top: 12px solid $blueGray;
+    border-bottom: 12px solid $blueGray;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+    @include media($tablet) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  &__deets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include media($tablet) {
+      margin-right: 36px;
+      text-align: left;
+      align-items: flex-start;
+    }
+    h1 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      text-align: center;
+      @include media($tablet) {
+        font-size: 6em;
+        text-align: left;
+      }
+    }
+    h2 {
+      font-size: 2rem;
+      @include media($tablet) {
+        font-size: 3em;
+        text-align: left;
+      }
+    }
+
+    h3 {
+      font-size: 1rem;
+      color: $blueGray;
+      @include media($tablet) {
+        font-size: 2em;
+        text-align: left;
+      }
+    }
+  }
+
+  &__img {
+    width: 180px;
+    height: 180px;
+    box-shadow: 0px 2px 4px #B0BEC5;
+    border-radius: 50%;
+    opacity: 1;
+    margin: 12px auto;
+    @include media($tablet) {
+      width: 240px;
+      height: 240px;
+    }
+  }
+
+
+  img.arrow-down {
+    width: 50px;
+    animation: down_arrow_bounce 2s linear infinite
+  }
+}

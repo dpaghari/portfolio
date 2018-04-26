@@ -1,0 +1,42 @@
+.c-nav {
+  display: flex;
+  width: 100%;
+  padding: 6px 48px;
+  justify-content: center;
+  @include media($tablet) {
+    justify-content: flex-end;
+    padding: 12px 48px;
+  }
+  &__item {
+    text-decoration: none;
+    padding: 12px 6px;
+    margin: 0 12px;
+    color: $blueGray;
+    position: relative;
+    padding-bottom: 12px;
+    @include media($tablet) {
+      overflow: hidden;
+      margin: 0 24px;
+    }
+  }
+
+
+  &__item:before {
+    display: none;
+    content: "";
+    border-bottom: 1px solid $blueGray;
+    width: 100%;
+    transition: 0.2s all;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: -100%;
+    @include media($tablet) {
+      display: block;
+    }
+  }
+  &__item:hover:before {
+    left: 0
+  }
+}

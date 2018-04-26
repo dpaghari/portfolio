@@ -1,0 +1,86 @@
+.c-contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: $blueGray;
+  width: 100%;
+  height: 100%;
+  padding: 40px 0;
+  h6 {
+    margin: 24px auto;
+    color: $winterWhite;
+    text-align: center;
+    font-size: 2em;
+    @include media($tablet) {
+      font-size: 3em;
+    }
+  }
+  a {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2em;
+    margin: 24px auto;
+    color: $winterWhite;
+    padding-bottom: 0;
+    transition: 0.2s padding-bottom;
+    width: auto;
+
+    &.c-contact__emailBtn {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 12px;
+      font-size: 1.6em;
+      @include media($tablet) {
+        font-size: 3em;
+      }
+    }
+
+    &.c-contact__emailBtn:before {
+      display: block;
+      content: "";
+      border-bottom: 1px solid $winterWhite;
+      width: 100%;
+      transition: 0.2s all;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: -100%;
+    }
+    &.c-contact__emailBtn:hover:before {
+      left: 0
+    }
+  }
+  &__mail-alt {
+    display: none;
+  }
+  &__socials {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    li {
+      margin: 0px 24px;
+      @include media($tablet) {
+        margin: 0px 36px;
+
+      }
+      svg {
+        path {
+          fill: $winterWhite;
+        }
+        width: 24px;
+        height: 24px;
+        transition: 0.2s all;
+
+        &:hover {
+          path {
+            fill: darken($winterWhite, 10%);
+          }
+        }
+      }
+    }
+  }
+}
