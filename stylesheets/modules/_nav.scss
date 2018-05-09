@@ -3,15 +3,38 @@
   width: 100%;
   padding: 6px 48px;
   justify-content: center;
+  background-color: $blueGray;
+  position: fixed;
+  top: 0;
+  color: $winterWhite;
+  z-index: 5;
+  flex-direction: column;
   @include media($tablet) {
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 12px 48px;
+    flex-direction: row;
   }
+
+  &__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__left {
+    font-size: 1.4em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__item {
+    display: inline-block;
     text-decoration: none;
     padding: 12px 6px;
     margin: 0 12px;
-    color: $blueGray;
+    color: $winterWhite;
     position: relative;
     padding-bottom: 12px;
     @include media($tablet) {
@@ -24,7 +47,7 @@
   &__item:before {
     display: none;
     content: "";
-    border-bottom: 1px solid $blueGray;
+    border-bottom: 1px solid $winterWhite;
     width: 100%;
     transition: 0.2s all;
     position: absolute;
