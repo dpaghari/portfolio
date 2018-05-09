@@ -16,6 +16,9 @@
       justify-content: flex-start;
     }
     li {
+      @include media($tablet) {
+        margin-right: 36px;
+      }
       svg {
         path {
           fill: $blueGray;
