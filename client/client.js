@@ -6,26 +6,29 @@ $(document).ready(function (){
   });
 
   let $splash = document.querySelector('.c-hero');
-  let heroWaypoint = new Waypoint({
-    element: $splash,
-    handler: function(direction) {
-      if(direction === 'down')
-      $splash.classList.add('wp-fadeup');
-    }
-  });
-
+  if ($splash) {
+    let heroWaypoint = new Waypoint({
+      element: $splash,
+      handler: function (direction) {
+        if (direction === 'down')
+          $splash.classList.add('wp-fadeup');
+      }
+    });
+  }
 
   let $projects = Array.from(document.querySelectorAll('.c-projects__project'));
 
   $projects.map(($el) => {
-    let projectWaypoint = new Waypoint({
-      element: $el,
-      handler: function(direction) {
-        if(direction === 'down')
-        $el.classList.add('wp-fadein');
-      },
-      offset: '35%'
-    });
+    if ($el) {
+      let projectWaypoint = new Waypoint({
+        element: $el,
+        handler: function (direction) {
+          if (direction === 'down')
+            $el.classList.add('wp-fadein');
+        },
+        offset: '35%'
+      });
+    }
   });
 
   $('a[href^="#"]').on('click',function (e) {

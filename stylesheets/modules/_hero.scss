@@ -7,6 +7,16 @@
   color: $blueGray;
   position: relative;
   margin-top: 80px;
+  &__name {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 24px auto;
+    width: 70%;
+    @include media($tablet) {
+      font-size: 4rem;
+    }
+  }
   &__socials {
     width: 100%;
     display: flex;
@@ -14,11 +24,11 @@
     list-style-type: none;
     margin: 24px auto;
     @include media($tablet) {
-      justify-content: flex-start;
+      justify-content: space-around;
     }
     li {
       @include media($tablet) {
-        margin-right: 36px;
+        // margin-right: 36px;
       }
       svg {
         path {
@@ -37,14 +47,14 @@
   }
   &__lockup {
     padding: 24px 32px;
-    border-top: 12px solid $blueGray;
-    border-bottom: 12px solid $blueGray;
+    // border-top: 12px solid $blueGray;
+    // border-bottom: 12px solid $blueGray;
     display: flex;
     align-items: center;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
     @include media($tablet) {
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-around;
     }
   }
@@ -59,28 +69,19 @@
       text-align: left;
       align-items: flex-start;
     }
-    h1 {
-      font-size: 3rem;
-      text-transform: uppercase;
-      text-align: center;
-      @include media($tablet) {
-        font-size: 6em;
-        text-align: left;
-      }
-    }
     h2 {
-      font-size: 2rem;
+      font-size: 1rem;
       @include media($tablet) {
-        font-size: 3em;
+        font-size: 1rem;
         text-align: left;
       }
     }
 
     h3 {
-      font-size: 1rem;
+      font-size: 0.8rem;
       color: $blueGray;
       @include media($tablet) {
-        font-size: 2em;
+        font-size: 0.8rem;
         text-align: left;
       }
     }

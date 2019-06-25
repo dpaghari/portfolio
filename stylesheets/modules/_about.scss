@@ -1,5 +1,4 @@
 .c-about {
-  background: $winterWhite;
   color: $blueGray;
   display: flex;
   justify-content: center;
@@ -30,7 +29,9 @@
       margin: 24px auto;
       display: block;
     }
-    a.hiphop {
+    &-link {
+      padding: 0 2px 4px 2px;
+      border-bottom: 1px solid $blueGray;
       text-decoration: none;
       color: $blueGray;
     }
