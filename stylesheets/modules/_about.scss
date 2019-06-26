@@ -21,6 +21,9 @@
     }
   }
   &__bio {
+    padding: 36px;
+    border-radius: 12px;
+    background: $tintYellow;
     width: 70%;
     font-size: 1.3rem;
     line-height: 2rem;
